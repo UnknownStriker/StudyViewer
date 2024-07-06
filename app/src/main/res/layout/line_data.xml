@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bookshelf">
-
+<!--책 개수만큼 imagebutton 만들고 사진도 넣어야 되는데 사진 받거나 만들어야됨 ㅇㅇ-->
     <ImageButton
         android:id="@+id/book"
         android:layout_width="100dp"

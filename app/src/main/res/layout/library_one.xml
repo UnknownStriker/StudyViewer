@@ -9,7 +9,7 @@
     android:background="@drawable/bookshelf">
 
     <ImageButton
-        android:id="@+id/book"
+        android:id="@+id/book1"
         android:layout_width="100dp"
         android:layout_height="320dp"
         android:background="@drawable/book_button"
@@ -28,7 +28,7 @@
         android:background="@drawable/book_button_two"
         android:contentDescription="책2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/book"
+        app:layout_constraintEnd_toStartOf="@id/book1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.077"
         android:layout_marginRight="10dp"/>

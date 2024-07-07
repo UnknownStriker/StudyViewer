@@ -10,11 +10,13 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     private lateinit var button1: ImageButton
     private lateinit var librarian: Librarian
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        librarian = Librarian(this)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        librarian = Librarian(this) // Moved after setContentView
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

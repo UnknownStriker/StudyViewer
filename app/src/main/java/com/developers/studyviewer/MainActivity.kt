@@ -1,11 +1,13 @@
 package com.developers.studyviewer
 
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.room.Room
 
 class MainActivity : AppCompatActivity() {
     private lateinit var button1: ImageButton
@@ -26,5 +28,7 @@ class MainActivity : AppCompatActivity() {
         button1.setOnClickListener {
             librarian.initialize()
         }
+
     }
+
 }

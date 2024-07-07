@@ -36,5 +36,57 @@
         android:id="@+id/text1"
         android:text="hi"
         android:textSize="60sp"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text1"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/text2"
+        android:text="hi"
+        android:textSize="60sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text2"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/text3"
+        android:text="hi"
+        android:textSize="60sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="100dp"
+        android:id="@+id/text4"
+        android:text="hi"
+        android:textSize="60sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text4"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/text5"
+        android:text="hi"
+        android:textSize="60sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text5"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/text6"
+        android:text="hi"
+        android:textSize="60sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

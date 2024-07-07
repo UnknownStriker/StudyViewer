@@ -9,10 +9,10 @@
     android:background="@drawable/bookshelf">
 <!--책 개수만큼 imagebutton 만들고 사진도 넣어야 되는데 사진 받거나 만들어야됨 ㅇㅇ-->
     <ImageButton
-        android:id="@+id/book"
+        android:id="@+id/book1"
         android:layout_width="100dp"
         android:layout_height="320dp"
-        android:background="@drawable/book_button"
+        android:background="@drawable/closed_book"
         android:contentDescription="책1"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
         android:background="@drawable/closed_book"
         android:contentDescription="책2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/book"
+        app:layout_constraintEnd_toStartOf="@id/book1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.077"
         android:layout_marginRight="10dp"/>

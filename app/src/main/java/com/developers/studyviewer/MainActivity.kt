@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.room.Room
 
 class MainActivity : AppCompatActivity() {
     private lateinit var button1: ImageButton
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         button1.setOnClickListener {
             librarian.initialize()
         }
+
     }
 
 }

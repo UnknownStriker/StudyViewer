@@ -16,7 +16,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginBottom="412dp"
         android:background="@drawable/closed_book_purple"
-        android:contentDescription="언어, 문학"
+        android:contentDescription="korean"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -63,7 +63,7 @@
         android:layout_marginTop="68dp"
         android:background="@drawable/closed_book_blue"
         android:contentDescription="인문과학"
-        app:layout_constraintStart_toEndOf="@id/book4"
+        app:layout_constraintStart_toEndOf="@+id/book4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -74,7 +74,7 @@
         android:layout_marginEnd="52dp"
         android:background="@drawable/closed_book_red"
         android:contentDescription="인문과학"
-        app:layout_constraintEnd_toStartOf="@id/book7"
+        app:layout_constraintEnd_toStartOf="@+id/book7"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/book5"
         app:layout_constraintTop_toTopOf="parent" />

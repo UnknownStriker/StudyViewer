@@ -30,14 +30,14 @@ class Librarian(private val activity: Activity) {
                 setupShelf(R.id.library_one, 1)
             }
             2 -> {
-                activity.setContentView(R.layout.library_one)
-                setupShelf(R.id.library_one, 2)
+                activity.setContentView(R.layout.library_two)
+                setupShelf(R.id.library_two, 2)
             }
         }
     }
 
     fun initialize() {
-        loadShelf(1)
+        loadShelf(2)
     }
 
     private fun setupShelf(layoutId: Int, shelfNumber: Int) {

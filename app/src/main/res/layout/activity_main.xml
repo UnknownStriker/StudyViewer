@@ -14,6 +14,7 @@
         android:layout_width="250dp"
         android:layout_height="125dp"
         android:background="@drawable/start"
+        android:layout_marginRight="10px"
         android:contentDescription="시작"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

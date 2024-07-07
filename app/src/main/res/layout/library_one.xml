@@ -12,26 +12,82 @@
         android:id="@+id/book1"
         android:layout_width="100dp"
         android:layout_height="320dp"
-        android:background="@drawable/closed_book"
-        android:contentDescription="책1"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="412dp"
+        android:background="@drawable/closed_book_purple"
+        android:contentDescription="언어, 문학"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.077"
-        android:layout_marginRight="10dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/book2"
         android:layout_width="100dp"
         android:layout_height="320dp"
-        android:background="@drawable/book_button_two"
-        android:contentDescription="책2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/book1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.077"
-        android:layout_marginRight="10dp"/>
 
+        android:layout_marginTop="68dp"
+        android:background="@drawable/closed_book_indigo"
+        android:contentDescription="인문과학"
+        app:layout_constraintEnd_toStartOf="@+id/book"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/book1"
+        app:layout_constraintStart_toEndOf="@+id/book1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/book3"
+        android:layout_width="100dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/closed_book_yellow"
+        android:contentDescription="상경"
+        app:layout_constraintStart_toEndOf="@+id/book2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/book4"
+        android:layout_width="100dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/closed_book_green"
+        android:contentDescription="인문과학"
+        app:layout_constraintStart_toEndOf="@+id/book3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/book5"
+        android:layout_width="100dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/closed_book_blue"
+        android:contentDescription="인문과학"
+        app:layout_constraintStart_toEndOf="@id/book4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/book6"
+        android:layout_width="100dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/closed_book_red"
+        android:contentDescription="인문과학"
+        app:layout_constraintEnd_toStartOf="@id/book"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/book5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/book"
+        android:layout_width="100dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="552dp"
+        android:background="@drawable/closed_book_orange"
+        android:contentDescription="상경"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ class Librarian(private val activity: Activity) {
                     val child = tmp.getChildAt(i)
                     if(child is ImageButton) {
                         child.setOnClickListener {
-                            book.loadBook(child.contentDescription.toString())
+                            book.loadBook(child.contentDescription.toString(), 1)
                         }
                     }
                 }

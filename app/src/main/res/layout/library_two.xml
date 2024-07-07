@@ -25,7 +25,7 @@
         android:id="@+id/book2"
         android:layout_width="100dp"
         android:layout_height="320dp"
-        android:background="@drawable/book_button_two"
+        android:background="@drawable/closed_book"
         android:contentDescription="책2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/book"

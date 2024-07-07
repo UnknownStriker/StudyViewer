@@ -37,7 +37,7 @@ class Librarian(private val activity: Activity) {
     }
 
     fun initialize() {
-        loadShelf(2)
+        loadShelf(1)
     }
 
     private fun setupShelf(layoutId: Int, shelfNumber: Int) {

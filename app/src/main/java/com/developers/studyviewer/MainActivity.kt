@@ -1,6 +1,7 @@
 package com.developers.studyviewer
 
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,4 +28,5 @@ class MainActivity : AppCompatActivity() {
             librarian.initialize()
         }
     }
+
 }

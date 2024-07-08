@@ -56,4 +56,231 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"
         android:id="@+id/selector2"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="150dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/selector2"
+        app:layout_constraintTop_toTopOf="@id/selector2" />
+    <TextView
+        android:id="@+id/description1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="학과 설명"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/text1"
+        app:layout_constraintTop_toTopOf="@id/text1" />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="205dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/text1"
+        app:layout_constraintTop_toTopOf="@id/text1" />
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="이런 학생에게 권함"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/text2"
+        app:layout_constraintTop_toTopOf="@id/text2" />
+    <TextView
+        android:id="@+id/description9"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="관련 선택 과목"
+        android:textSize="20sp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toStartOf="@id/description1"
+        app:layout_constraintTop_toBottomOf="@id/description1" />
+    <TextView
+        android:id="@+id/description3"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="국어"
+        android:textSize="20sp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintStart_toStartOf="@id/description1"
+        app:layout_constraintTop_toBottomOf="@id/description1" />
+    <TextView
+        android:id="@+id/description4"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="수학"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/description3"
+        app:layout_constraintTop_toBottomOf="@id/description3" />
+    <TextView
+        android:id="@+id/description5"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="영어"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/description4"
+        app:layout_constraintTop_toBottomOf="@id/description4" />
+    <TextView
+        android:id="@+id/description6"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="사회"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/description5"
+        app:layout_constraintTop_toBottomOf="@id/description5" />
+    <TextView
+        android:id="@+id/description7"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="과학"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/description6"
+        app:layout_constraintTop_toBottomOf="@id/description6" />
+    <TextView
+        android:id="@+id/description8"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="기타"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/description7"
+        app:layout_constraintTop_toBottomOf="@id/description7" />
+    <TextView
+        android:id="@+id/text8"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description3"
+        app:layout_constraintTop_toTopOf="@id/description3" />
+    <TextView
+        android:id="@+id/text9"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description4"
+        app:layout_constraintTop_toTopOf="@id/description4" />
+    <TextView
+        android:id="@+id/text10"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description5"
+        app:layout_constraintTop_toTopOf="@id/description5" />
+    <TextView
+        android:id="@+id/text11"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description6"
+        app:layout_constraintTop_toTopOf="@id/description6" />
+    <TextView
+        android:id="@+id/text12"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description7"
+        app:layout_constraintTop_toTopOf="@id/description7" />
+    <TextView
+        android:id="@+id/text13"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description8"
+        app:layout_constraintTop_toTopOf="@id/description8" />
+
+
+
+
+    <TextView
+        android:id="@+id/description13"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="개설 대학"
+        android:textSize="20sp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toStartOf="@id/description2"
+        app:layout_constraintTop_toBottomOf="@id/description2" />
+    <TextView
+        android:id="@+id/description10"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="서울"
+        android:textSize="20sp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintStart_toStartOf="@id/description2"
+        app:layout_constraintTop_toBottomOf="@id/description2" />
+    <TextView
+        android:id="@+id/description11"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:text="수도권"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/description10"
+        app:layout_constraintTop_toBottomOf="@id/description10" />
+    <TextView
+        android:id="@+id/description12"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="지방"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/description11"
+        app:layout_constraintTop_toBottomOf="@id/description11" />
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description10"
+        app:layout_constraintTop_toTopOf="@id/description10" />
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description11"
+        app:layout_constraintTop_toTopOf="@id/description11" />
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/description12"
+        app:layout_constraintTop_toTopOf="@id/description12" />
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:textSize="10sp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="@id/description1"
+        app:layout_constraintTop_toBottomOf="@id/description8" />
+    <TextView
+        android:id="@+id/description14"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:text="유사학과"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@id/text3"
+        app:layout_constraintBottom_toTopOf="@id/text3" />
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@id/description2"
+        app:layout_constraintTop_toTopOf="@id/text3" />
+    <TextView
+        android:id="@+id/description15"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:text="졸업 후 진로"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@id/text7"
+        app:layout_constraintBottom_toTopOf="@id/text7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,54 +1,73 @@
 package com.developers.studyviewer
 
+import KeyValueAdapter
 import android.app.Activity
-import android.widget.ImageButton
-import androidx.constraintlayout.widget.ConstraintLayout
-import kotlin.math.abs
+import android.widget.Button
+
 
 class Librarian(private val activity: Activity) {
-    private val book = DynamicBook(activity, this)
-    private var isLibraryView = false
-    private var curLib = 0;
+    private var cur = 0
+    private lateinit var adapter1: KeyValueAdapter
+    private lateinit var adapter2: KeyValueAdapter
+    private lateinit var adapter3: KeyValueAdapter
 
-    fun loadNextShelf() {
-        if(curLib + 1 <= 2) {
-            curLib++
-            loadShelf(curLib)
+    private val firstToSecondMap: Map<String, List<String>>? = null
+    private val secondToThirdMap: Map<String, List<String>>? = null
+    private val getCsv: Map<String, String>? = null
+
+    fun initializeMenu() {
+        activity.findViewById<Button>(R.id.btn1).setOnClickListener {
+            moveTo(1)
+        }
+        activity.findViewById<Button>(R.id.btn2).setOnClickListener {
+            moveTo(2)
+        }
+        activity.findViewById<Button>(R.id.btn3).setOnClickListener {
+            moveTo(3)
+        }
+        activity.findViewById<Button>(R.id.btn4).setOnClickListener {
+            moveTo(4)
         }
     }
+    fun moveTo(num: Int) {
+        if(cur == num) return
 
-    fun loadPreviousShelf() {
-        if(curLib - 1 > 0) {
-            curLib--
-            loadShelf(curLib)
-        }
-    }
-    fun loadShelf(num: Int) {
         when (num) {
             1 -> {
-                activity.setContentView(R.layout.library_one)
-                setupShelf(R.id.library_one, 1)
+                activity.setContentView(R.layout.first)
+                setUp(1)
             }
             2 -> {
-                activity.setContentView(R.layout.library_two)
-                setupShelf(R.id.library_two, 2)
+                activity.setContentView(R.layout.second)
+                sel3 = " "
+            }
+            3 -> {
+                activity.setContentView(R.layout.third)
+                sel3 = " "
+            }
+            4 -> {
+                activity.setContentView(R.layout.fourth)
             }
         }
+        initializeMenu()
     }
 
-    fun initialize() {
-        loadShelf(1)
-    }
+    private fun readMap(number: Int) {
+        if(number == 1) {
 
-    private fun setupShelf(layoutId: Int, shelfNumber: Int) {
-        val viewGroup = activity.findViewById<ConstraintLayout>(layoutId)
-        for (i in 0 until viewGroup.childCount) {
-            val child = viewGroup.getChildAt(i)
-            if (child is ImageButton) {
-                child.setOnClickListener {
-                    book.loadBook(child.contentDescription.toString(), shelfNumber)
-                }
-            }
         }
+        if(number == 2) {
+
+        }
+        if(number == 3) {
+
+        }
+        if(number == 4) {
+
+        }
+    }
+    private fun setUp(number: Int) {
+        readMap(number)
+        
     }
 }

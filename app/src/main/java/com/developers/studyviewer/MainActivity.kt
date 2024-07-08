@@ -2,6 +2,7 @@ package com.developers.studyviewer
 
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,10 +25,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        button1 = findViewById(R.id.startButton)
-        button1.setOnClickListener {
-            librarian.initialize()
-        }
+
+        librarian.moveTo(1)
 
     }
 

@@ -1,19 +1,31 @@
 package com.developers.studyviewer
 
-import KeyValueAdapter
 import android.app.Activity
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ListView
 
 
 class Librarian(private val activity: Activity) {
     private var cur = 0
-    private lateinit var adapter1: KeyValueAdapter
-    private lateinit var adapter2: KeyValueAdapter
-    private lateinit var adapter3: KeyValueAdapter
 
-    private val firstToSecondMap: Map<String, List<String>>? = null
-    private val secondToThirdMap: Map<String, List<String>>? = null
-    private val getCsv: Map<String, String>? = null
+
+    private val singleMap: Map<String, String> = mapOf(
+        "어문 계열" to "korean",
+        "상경 계열" to "하이"
+    )
+    private val firstToSecondMap: Map<String, List<String>> = mapOf(
+
+    )
+    private val secondToThirdMap: Map<String, List<String>> = mapOf(
+
+    )
+    private val getCsv: Map<String, String> = mapOf(
+
+    )
+    private lateinit var listView1: ListView
+    private lateinit var listView2: ListView
+    private lateinit var listView3: ListView
 
     fun initializeMenu() {
         activity.findViewById<Button>(R.id.btn1).setOnClickListener {
@@ -39,11 +51,9 @@ class Librarian(private val activity: Activity) {
             }
             2 -> {
                 activity.setContentView(R.layout.second)
-                sel3 = " "
             }
             3 -> {
                 activity.setContentView(R.layout.third)
-                sel3 = " "
             }
             4 -> {
                 activity.setContentView(R.layout.fourth)
@@ -54,7 +64,6 @@ class Librarian(private val activity: Activity) {
 
     private fun readMap(number: Int) {
         if(number == 1) {
-
         }
         if(number == 2) {
 
@@ -68,6 +77,15 @@ class Librarian(private val activity: Activity) {
     }
     private fun setUp(number: Int) {
         readMap(number)
-        
+        if(number == 1) {
+            listView1 = activity.findViewById(R.id.selector1)
+
+            val firstList = singleMap.keys.toList()
+            val adapter1 = ArrayAdapter(activity, android.R.layout.simple_list_item_1, firstList)
+            listView1.adapter = adapter1
+
+
+
+        }
     }
 }

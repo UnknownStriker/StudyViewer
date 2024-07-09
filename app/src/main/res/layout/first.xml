@@ -43,7 +43,8 @@
         app:layout_constraintTop_toTopOf="parent" />
     <ListView
         android:layout_width="200dp"
-        android:layout_height="1200dp"
+        android:layout_height="500dp"
+        android:fadeScrollbars="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="10dp"
@@ -52,39 +53,40 @@
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="100dp"
         android:textSize="13sp"
+        android:scrollbars="vertical"
         app:layout_constraintStart_toEndOf="@id/selector1"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/description1"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginEnd="20dp"
         android:text="관련 학과"
-        android:textSize="20sp"
+        android:textColor="@color/blue"
         app:layout_constraintEnd_toStartOf="@id/text1"
         app:layout_constraintTop_toTopOf="@id/text1" />
     <TextView
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
         android:id="@+id/text2"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="@id/text1"
         app:layout_constraintTop_toBottomOf="@id/text1"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="20dp"
 
         />
     <TextView
         android:id="@+id/description2"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="50dp"
         android:text="일반 선택"
+        android:textColor="@color/blue"
         android:layout_marginEnd="20dp"
-        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/text2"
         app:layout_constraintTop_toTopOf="@id/text2" />
     <TextView
@@ -102,15 +104,17 @@
         android:layout_height="50dp"
         android:layout_marginEnd="20dp"
         android:text="진로 선택"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@id/text3"
+        android:textColor="@color/blue"
+
+        app:layout_constraintStart_toStartOf="@id/description2"
         app:layout_constraintTop_toTopOf="@id/text3" />
     <TextView
-        android:layout_width="400dp"
+        android:layout_width="300dp"
         android:layout_height="600dp"
         android:id="@+id/text4"
         app:layout_constraintStart_toEndOf="@id/text1"
         app:layout_constraintTop_toTopOf="@id/text1"
+        android:textSize="13sp"
         android:layout_marginStart="200dp"
         />
     <TextView
@@ -118,8 +122,9 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="멘토의 한 마디"
+        android:textColor="@color/blue"
+
         android:layout_marginEnd="20dp"
-        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/text4"
         app:layout_constraintTop_toTopOf="@id/text4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

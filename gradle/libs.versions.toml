@@ -11,6 +11,7 @@ activity = "1.9.0"
 constraintlayout = "2.1.4"
 roomKtx = "2.6.1"
 opencsv = "4.6"
+multidex = "2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -22,7 +23,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 opencsv = { group = "com.opencsv", name = "opencsv", version.ref = "opencsv" }
-
+androidx-multidex = { group = "androidx.multidex", name="multidex", version.ref="multidex"}
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

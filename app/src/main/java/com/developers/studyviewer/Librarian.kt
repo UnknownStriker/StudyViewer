@@ -1,6 +1,7 @@
 package com.developers.studyviewer
 
 import android.app.Activity
+import android.text.method.ScrollingMovementMethod
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -113,6 +114,13 @@ class Librarian(private val activity: Activity) {
                 }
             }
             2, 3-> {
+                if(cur == 2) {
+                    activity.findViewById<TextView>(R.id.text1).movementMethod = ScrollingMovementMethod()
+                    activity.findViewById<TextView>(R.id.text2).movementMethod = ScrollingMovementMethod()
+                    activity.findViewById<TextView>(R.id.text3).movementMethod = ScrollingMovementMethod()
+                    activity.findViewById<TextView>(R.id.text7).movementMethod = ScrollingMovementMethod()
+
+                }
                 listView1 = activity.findViewById(R.id.selector1)
                 listView2 = activity.findViewById(R.id.selector2)
                 val target = if (cur == 2) relative else subject

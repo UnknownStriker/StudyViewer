@@ -10,8 +10,9 @@ android {
     defaultConfig {
         applicationId = "com.developers.studyviewer"
         minSdk = 19
+        multiDexEnabled = true
         targetSdk = 34
-        versionCode = 1
+        versionCode = 100
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -42,6 +43,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.opencsv)
+    implementation(libs.androidx.multidex)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

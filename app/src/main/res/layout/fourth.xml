@@ -7,41 +7,54 @@
     <Button
         android:id="@+id/btn1"
         android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="20dp"
         android:text="계열"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnUnselect"/>
     <Button
         android:id="@+id/btn2"
+        android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="학과"
         app:layout_constraintStart_toEndOf="@id/btn1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnUnselect"/>
     <Button
         android:id="@+id/btn3"
+        android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="일반 교과"
         app:layout_constraintStart_toEndOf="@id/btn2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnUnselect"/>
     <Button
         android:id="@+id/btn4"
+        android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="전문 교과"
         app:layout_constraintStart_toEndOf="@id/btn3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnSelect"/>
     <ListView
+        android:choiceMode="singleChoice"
+        android:listSelector="#F4F4F4"
         android:layout_width="200dp"
         android:layout_height="500dp"
         android:fadeScrollbars="false"
@@ -51,6 +64,8 @@
         android:layout_marginTop="100dp"
         android:id="@+id/selector1"/>
     <ListView
+        android:choiceMode="singleChoice"
+        android:listSelector="#F4F4F4"
         android:layout_width="200dp"
         android:layout_height="500dp"
         android:fadeScrollbars="false"
@@ -60,6 +75,8 @@
         android:layout_marginTop="100dp"
         android:id="@+id/selector2"/>
     <ListView
+        android:choiceMode="singleChoice"
+        android:listSelector="#F4F4F4"
         android:layout_width="200dp"
         android:layout_height="500dp"
         android:fadeScrollbars="false"
@@ -69,23 +86,26 @@
         android:id="@+id/selector3"/>
 
     <TextView
-        android:layout_width="250dp"
-        android:layout_height="500dp"
+        android:layout_width="400dp"
+        android:layout_height="600dp"
         android:id="@+id/text1"
-        app:layout_constraintStart_toEndOf="@id/selector3"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="150dp"
-        android:layout_marginStart="150dp"
-        android:textSize="10sp"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toEndOf="@id/description1"
+        app:layout_constraintTop_toTopOf="@id/description1"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+
         />
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
         android:text="설명"
+        android:textSize="21sp"
         android:id="@+id/description1"
-        app:layout_constraintStart_toStartOf="@id/text1"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="110dp"
-        android:textColor="@color/blue"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/selector3"
+        app:layout_constraintTop_toTopOf="@id/selector3"
+        android:textColor="@color/highlight"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

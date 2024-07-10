@@ -7,41 +7,54 @@
     <Button
         android:id="@+id/btn1"
         android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="20dp"
         android:text="계열"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnUnselect"/>
     <Button
         android:id="@+id/btn2"
+        android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="학과"
         app:layout_constraintStart_toEndOf="@id/btn1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnSelect"/>
     <Button
         android:id="@+id/btn3"
+        android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="일반 교과"
         app:layout_constraintStart_toEndOf="@id/btn2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnUnselect"/>
     <Button
         android:id="@+id/btn4"
+        android:shape="rectangle"
+        app:cornerRadius="0dp"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="전문 교과"
         app:layout_constraintStart_toEndOf="@id/btn3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/BtnUnselect"/>
     <ListView
+        android:choiceMode="singleChoice"
+        android:listSelector="#F4F4F4"
         android:layout_width="200dp"
         android:layout_height="500dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +64,8 @@
         android:layout_marginTop="100dp"
         android:id="@+id/selector1"/>
     <ListView
+        android:choiceMode="singleChoice"
+        android:listSelector="#F4F4F4"
         android:layout_width="200dp"
         android:layout_height="500dp"
         android:fadeScrollbars="false"
@@ -61,234 +76,308 @@
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="220dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="100dp"
-        android:textSize="10sp"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:fadeScrollbars="false"
         android:scrollbars="vertical"
+        app:layout_constraintStart_toEndOf="@id/description1"
+        app:layout_constraintTop_toTopOf="@id/description1" />
+    <TextView
+        android:id="@+id/description1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="학과 설명"
+        android:textSize="21sp"
+        android:textColor="@color/highlight"
+        android:layout_marginStart="20dp"
         app:layout_constraintStart_toEndOf="@id/selector2"
         app:layout_constraintTop_toTopOf="@id/selector2" />
     <TextView
-        android:id="@+id/description1"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:text="학과 설명"
-        android:textColor="@color/blue"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toStartOf="@id/text1"
-        app:layout_constraintTop_toTopOf="@id/text1" />
-    <TextView
         android:id="@+id/text2"
-        android:layout_width="230dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="150dp"
-        android:textSize="10sp"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:fadeScrollbars="false"
         android:scrollbars="vertical"
-        app:layout_constraintStart_toEndOf="@id/text1"
-        app:layout_constraintTop_toTopOf="@id/text1" />
+        app:layout_constraintStart_toEndOf="@id/description2"
+        app:layout_constraintTop_toTopOf="@id/description2" />
     <TextView
         android:id="@+id/description2"
-        android:layout_width="80dp"
-        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="21sp"
         android:text="이런 학생에게 권함"
-        android:textColor="@color/blue"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toStartOf="@id/text2"
-        app:layout_constraintTop_toTopOf="@id/text2" />
+        android:textColor="@color/highlight"
+        app:layout_constraintStart_toStartOf="@id/description1"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+
     <TextView
         android:id="@+id/description9"
-        android:layout_width="130dp"
-        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:text="관련 선택 과목"
-        android:textColor="@color/blue"
-        android:layout_marginTop="60dp"
-        app:layout_constraintStart_toStartOf="@id/description1"
-        app:layout_constraintTop_toBottomOf="@id/description1" />
+        android:textColor="@color/highlight"
+        android:layout_marginTop="20dp"
+        android:textSize="21sp"
+        app:layout_constraintStart_toStartOf="@id/description2"
+        app:layout_constraintTop_toBottomOf="@id/text2" />
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:fadeScrollbars="false"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+
+        app:layout_constraintStart_toEndOf="@id/description9"
+        app:layout_constraintTop_toTopOf="@id/description9">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
     <TextView
         android:id="@+id/description3"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:text="국어"
-        android:textSize="12sp"
+        android:textSize="21sp"
+        android:textColor="@color/Red"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/description1"
-        app:layout_constraintTop_toBottomOf="@id/description9" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/description4"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:text="수학"
-        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:textSize="21sp"
+        android:textColor="@color/Orange"
         app:layout_constraintStart_toStartOf="@id/description3"
-        app:layout_constraintTop_toBottomOf="@id/description3" />
+        app:layout_constraintTop_toBottomOf="@id/text8" />
     <TextView
         android:id="@+id/description5"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:text="영어"
-        android:textSize="12sp"
+        android:textSize="21sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/Yellow"
         app:layout_constraintStart_toStartOf="@id/description4"
-        app:layout_constraintTop_toBottomOf="@id/description4" />
+        app:layout_constraintTop_toBottomOf="@id/text9" />
     <TextView
         android:id="@+id/description6"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:text="사회"
-        android:textSize="12sp"
+        android:textSize="21sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/Green"
         app:layout_constraintStart_toStartOf="@id/description5"
-        app:layout_constraintTop_toBottomOf="@id/description5" />
+        app:layout_constraintTop_toBottomOf="@id/text10" />
     <TextView
         android:id="@+id/description7"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:text="과학"
-        android:textSize="12sp"
+        android:textSize="21sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/Blue"
         app:layout_constraintStart_toStartOf="@id/description6"
-        app:layout_constraintTop_toBottomOf="@id/description6" />
+        app:layout_constraintTop_toBottomOf="@id/text11" />
     <TextView
         android:id="@+id/description8"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:text="기타"
-        android:textSize="12sp"
+        android:textSize="21sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/Purple"
         app:layout_constraintStart_toStartOf="@id/description7"
-        app:layout_constraintTop_toBottomOf="@id/description7" />
+        app:layout_constraintTop_toBottomOf="@id/text12" />
     <TextView
         android:id="@+id/text8"
-        android:layout_width="250dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/Red"
         app:layout_constraintStart_toEndOf="@id/description3"
         app:layout_constraintTop_toTopOf="@id/description3" />
     <TextView
         android:id="@+id/text9"
-        android:layout_width="250dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/Orange"
         app:layout_constraintStart_toEndOf="@id/description4"
         app:layout_constraintTop_toTopOf="@id/description4" />
     <TextView
         android:id="@+id/text10"
-        android:layout_width="250dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/Yellow"
         app:layout_constraintStart_toEndOf="@id/description5"
         app:layout_constraintTop_toTopOf="@id/description5" />
     <TextView
         android:id="@+id/text11"
-        android:layout_width="250dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/Green"
         app:layout_constraintStart_toEndOf="@id/description6"
         app:layout_constraintTop_toTopOf="@id/description6" />
     <TextView
         android:id="@+id/text12"
-        android:layout_width="250dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/Blue"
         app:layout_constraintStart_toEndOf="@id/description7"
         app:layout_constraintTop_toTopOf="@id/description7" />
     <TextView
         android:id="@+id/text13"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/Purple"
         app:layout_constraintStart_toEndOf="@id/description8"
         app:layout_constraintTop_toTopOf="@id/description8" />
-
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
     <TextView
         android:id="@+id/description13"
-        android:layout_width="130dp"
-        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:text="개설 대학"
-        android:textColor="@color/blue"
-        android:layout_marginTop="120dp"
-        app:layout_constraintStart_toStartOf="@id/description2"
-        app:layout_constraintTop_toBottomOf="@id/description2" />
+        android:textColor="@color/highlight"
+        android:layout_marginStart="20dp"
+        android:textSize="21sp"
+        app:layout_constraintStart_toEndOf="@id/scroll1"
+        app:layout_constraintTop_toTopOf="@id/description9" />
+    <ScrollView
+        android:fadeScrollbars="false"
+        android:id="@+id/scroll2"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/description13"
+        app:layout_constraintTop_toTopOf="@id/description13">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
     <TextView
         android:id="@+id/description10"
-        android:layout_width="50dp"
-        android:layout_height="25dp"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
         android:text="서울"
-        android:textSize="12sp"
-        android:layout_marginTop="160dp"
-        app:layout_constraintStart_toStartOf="@id/description2"
-        app:layout_constraintTop_toBottomOf="@id/description2" />
+        android:textSize="21sp"
+        android:textColor="@color/Red"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/description11"
         android:layout_width="60dp"
-        android:layout_height="25dp"
+        android:layout_height="35dp"
         android:text="수도권"
-        android:textSize="12sp"
-        android:layout_marginTop="10dp"
+        android:textSize="21sp"
+        android:textColor="@color/Yellow"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@id/description10"
-        app:layout_constraintTop_toBottomOf="@id/description10" />
+        app:layout_constraintTop_toBottomOf="@id/text4" />
     <TextView
         android:id="@+id/description12"
-        android:layout_width="50dp"
-        android:layout_height="25dp"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
         android:text="지방"
-        android:textSize="12sp"
-        android:layout_marginTop="10dp"
+        android:textSize="21sp"
+        android:textColor="@color/Purple"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@id/description11"
-        app:layout_constraintTop_toBottomOf="@id/description11" />
+        app:layout_constraintTop_toBottomOf="@id/text5" />
     <TextView
         android:id="@+id/text4"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/Red"
         app:layout_constraintStart_toEndOf="@id/description10"
         app:layout_constraintTop_toTopOf="@id/description10" />
     <TextView
         android:id="@+id/text5"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/Yellow"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/description11"
         app:layout_constraintTop_toTopOf="@id/description11" />
     <TextView
         android:id="@+id/text6"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:textSize="10sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/Purple"
         app:layout_constraintStart_toEndOf="@id/description12"
         app:layout_constraintTop_toTopOf="@id/description12" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
     <TextView
         android:id="@+id/text3"
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="200dp"
-        android:textSize="10sp"
+        android:textSize="16sp"
         android:scrollbars="vertical"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@id/description1"
-        app:layout_constraintTop_toBottomOf="@id/description8" />
+        android:fadeScrollbars="false"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/description14"
+        app:layout_constraintTop_toTopOf="@id/description14"
+        />
     <TextView
         android:id="@+id/description14"
-        android:layout_width="75dp"
-        android:layout_height="25dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:text="유사학과"
-        android:textColor="@color/blue"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="@id/text3"
-        app:layout_constraintBottom_toTopOf="@id/text3" />
+        android:textSize="21sp"
+        android:textColor="@color/highlight"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/text1"
+        app:layout_constraintTop_toTopOf="@id/text1" />
     <TextView
         android:id="@+id/text7"
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:scrollbars="vertical"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@id/description2"
-        app:layout_constraintTop_toTopOf="@id/text3" />
+        android:fadeScrollbars="false"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/description15"
+        app:layout_constraintTop_toTopOf="@id/description15" />
     <TextView
         android:id="@+id/description15"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:text="졸업 후 진로"
-        android:textColor="@color/blue"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="@id/text7"
-        app:layout_constraintBottom_toTopOf="@id/text7" />
+        android:textSize="21sp"
+        android:textColor="@color/highlight"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/description14"
+        app:layout_constraintTop_toBottomOf="@id/text3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

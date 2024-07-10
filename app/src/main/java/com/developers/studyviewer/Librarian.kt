@@ -2,10 +2,13 @@ package com.developers.studyviewer
 
 import android.app.Activity
 import android.text.method.ScrollingMovementMethod
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import android.widget.ScrollView
 import android.widget.TextView
 import com.opencsv.CSVReader
 import java.io.BufferedReader
@@ -15,7 +18,7 @@ import java.io.InputStreamReader
 
 class Librarian(private val activity: Activity) {
     private var cur = 0
-
+    private var activated = false
 
     private var relative: MutableMap<String, List<String>> = mutableMapOf (
 
@@ -94,15 +97,117 @@ class Librarian(private val activity: Activity) {
                 activity.setContentView(R.layout.fourth)
             }
         }
+        activation(INVISIBLE)
+        activateScroll()
         setUp()
         initializeMenu()
     }
 
+    private fun activateScroll() {
+        when (cur) {
+            1 -> {
+                activity.findViewById<TextView>(R.id.text1).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text2).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text3).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text4).movementMethod = ScrollingMovementMethod()
+            }
+            2 -> {
+                activity.findViewById<TextView>(R.id.text1).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text2).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text3).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text7).movementMethod = ScrollingMovementMethod()
+            }
+            3 -> {
+                activity.findViewById<TextView>(R.id.text4).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text5).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text6).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text7).movementMethod = ScrollingMovementMethod()
+                activity.findViewById<TextView>(R.id.text8).movementMethod = ScrollingMovementMethod()
+            }
+            4 -> {
+                activity.findViewById<TextView>(R.id.text1).movementMethod = ScrollingMovementMethod()
+            }
+        }
+    }
+
+    private fun activation(state: Int) {
+        if(activity.findViewById<TextView>(R.id.description1).visibility  == state) return
+            when(cur) {
+                1 -> {
+                    activity.findViewById<TextView>(R.id.description1).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description2).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description3).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description4).visibility =
+                        state
+                }
+
+                2 -> {
+                    activity.findViewById<TextView>(R.id.description1).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description2).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description3).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description4).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description5).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description6).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description7).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description8).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description9).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description10).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description11).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description12).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description13).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description14).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description15).visibility =
+                        state
+                    activity.findViewById<ScrollView>(R.id.scroll1).setScrollbarFadingEnabled(true)
+                }
+
+                3 -> {
+                    activity.findViewById<TextView>(R.id.description1).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description2).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description3).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description4).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description5).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description6).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description7).visibility =
+                        state
+                    activity.findViewById<TextView>(R.id.description8).visibility =
+                        state
+                }
+
+                4 -> {
+                    activity.findViewById<TextView>(R.id.description1).visibility =
+                        state
+                }
+            }
+    }
     private fun setUp() {
+
         when (cur) {
             1 -> {
                 listView1 = activity.findViewById(R.id.selector1)
-
                 val firstList = relative.keys.toList()
                 val adapter1 = ArrayAdapter(activity, android.R.layout.simple_list_item_1, firstList)
                 listView1.adapter = adapter1
@@ -114,13 +219,6 @@ class Librarian(private val activity: Activity) {
                 }
             }
             2, 3-> {
-                if(cur == 2) {
-                    activity.findViewById<TextView>(R.id.text1).movementMethod = ScrollingMovementMethod()
-                    activity.findViewById<TextView>(R.id.text2).movementMethod = ScrollingMovementMethod()
-                    activity.findViewById<TextView>(R.id.text3).movementMethod = ScrollingMovementMethod()
-                    activity.findViewById<TextView>(R.id.text7).movementMethod = ScrollingMovementMethod()
-
-                }
                 listView1 = activity.findViewById(R.id.selector1)
                 listView2 = activity.findViewById(R.id.selector2)
                 val target = if (cur == 2) relative else subject
@@ -182,6 +280,7 @@ class Librarian(private val activity: Activity) {
 
 
     private fun update(filename: String) {
+        activation(VISIBLE)
         when(cur) {
             1 -> {
                 activity.findViewById<TextView>(R.id.text1).text = content[filename]?.elementAt(0)
@@ -190,6 +289,7 @@ class Librarian(private val activity: Activity) {
                 activity.findViewById<TextView>(R.id.text4).text = content[filename]?.elementAt(3)
             }
             2 -> {
+                activity.findViewById<ScrollView>(R.id.scroll1).setScrollbarFadingEnabled(false)
                 activity.findViewById<TextView>(R.id.text1).text = content[filename]?.elementAt(0)
                 activity.findViewById<TextView>(R.id.text2).text = content[filename]?.elementAt(1)
                 activity.findViewById<TextView>(R.id.text3).text = content[filename]?.elementAt(2)
